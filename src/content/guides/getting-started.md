@@ -143,6 +143,22 @@ __dist/index.html__
 
 In this setup, `index.js` explicitly requires `lodash` to be present, and binds it as `_` (no global scope pollution). By stating what dependencies a module needs, webpack can use this information to build a dependency graph. It then uses the graph to generate an optimized bundle where scripts will be executed in the correct order.
 
+Webpack command line have been migrated to webpack-cli, so in addition to webpack we also need to install webpack-cli
+``` bash
+npm install webpack-cli -D
+npm WARN deprecated babel-preset-es2015@6.24.1: 🙌  Thanks for using Babel: we recommend using babel-preset-env now: please read babeljs.io/env to update! 
+npm WARN deprecated nomnom@1.8.1: Package no longer supported. Contact support@npmjs.com for more info.
+
+> spawn-sync@1.0.15 postinstall /Users/gaoxinjian/Desktop/project_code/test/webpack_test/node_modules/spawn-sync
+> node postinstall
+
+npm WARN webpack_test@1.0.0 No description
+npm WARN webpack_test@1.0.0 No repository field.
+
++ webpack-cli@2.0.10
+added 514 packages in 78.682s
+```
+
 With that said, let's run `npx webpack` with our script as the [entry point](/concepts/entry-points) and `bundle.js` as the [output](/concepts/output). The `npx` command, which ships with Node 8.2 or higher, runs the webpack binary (`./node_modules/.bin/webpack`) of the webpack package we installed in the beginning:
 
 ``` bash
